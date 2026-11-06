@@ -1,0 +1,45 @@
+import math
+
+number = 7.35
+
+print(math.floor(number))  # Rounding down: 7
+print(math.ceil(number))   # Rounding up: 8
+
+import random
+
+# Task 14
+numbers = []
+
+for i in range(10):
+    number = random.randint(1, 100)
+    numbers.append(number)
+
+print(numbers)
+
+# Task 25
+from datetime import date
+
+def age_in_days(birth_date):
+    today = date.today()
+    days = today - birth_date
+    return days.days
+
+birth_date = date(2005, 5, 15)
+
+print(age_in_days(birth_date))
+
+# Task 36
+import os
+
+path = os.path.join("data", "2024", "report.txt")
+
+print(path)
+
+# Task 47
+import re
+
+text = "Hello123 World456"
+
+result = re.sub(r'\d', '#', text)
+
+print(result)
