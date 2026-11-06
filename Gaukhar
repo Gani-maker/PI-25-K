@@ -1,0 +1,28 @@
+import math #1
+num = float(input("Введите число: "))
+result = math.sqrt(num)
+print("Квадратный корень:", result)
+import random #2
+secret_number = random.randint(1, 50)
+print("Я загадал число от 1 до 50. Попробуй угадать!")
+while True:
+    guess = int(input("Введите число: "))
+    if guess < secret_number:
+        print("Загаданное число больше!")
+    elif guess > secret_number:
+        print("Загаданное число меньше!")
+    else:
+        print("Поздравляю! Ты угадал число!")
+        break
+from datetime import datetime #3
+birth_date = datetime(2005, 5, 15)
+print(birth_date.strftime("%d.%m.%Y"))
+import time #4
+for i in range(5, -1, -1):
+    print(i)
+    time.sleep(1)
+print("Старт!")
+import re #5
+text = "В корзине 5 яблок, 12 груш и 3 банана"
+numbers = re.findall(r'\d+', text)
+print(numbers)
